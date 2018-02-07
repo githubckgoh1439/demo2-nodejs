@@ -1,0 +1,54 @@
+<%- include layouts/header.ejs %>
+
+        <div class="page-data">
+            
+            <form method="post" action="/students/edit/<%=data[0].id%>">
+                <table cellpadding="11">
+                <tr>
+                    <td class="label">Name</td><td>: <input type="text" name="name" value="<%=data[0].name%>" required></td>
+                 </tr>
+                 <tr>
+                    <td class="label" valign="top">Address</td>
+                    <td valign="top">: 
+                        <textarea name="address" required cols="30" rows="5"><%=data[0].address%></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Phone</td><td>: <input type="text" value="<%=data[0].phone%>" name="phone" required></td>
+                 </tr>
+                  <tr>
+                    <td class="label">Sex</td><td>: <input type="text" name="sex" value="<%=data[0].sex%>" required></td>
+                 </tr>
+				  <tr>
+                    <td class="label">IC</td><td>: <input type="text" name="ic" value="<%=data[0].ic%>" required></td>
+                 </tr>
+				  <tr>
+                    <td class="label">Code</td><td>: <input type="text" name="student_code" value="<%=data[0].student_code%>" required></td>
+                 </tr>
+				 
+				  <tr>
+                    <td class="label">Age</td><td>: <input type="text" name="age" value="<%=data[0].age%>" required></td>
+                 </tr>
+				  <tr>
+                    <td class="label">Emergency</td><td>: <input type="text" name="emergency_contact" value="<%=data[0].emergency_contact%>" required></td>
+                 </tr>
+				  <tr>
+                    <td class="label">Class</td><td>: <input type="text" name="student_class" value="<%=data[0].student_class%>" required></td>
+                 </tr>
+				  <tr>
+                    <td class="label">Year</td><td>: <input type="text" name="year" value="<%=data[0].year%>" required></td>
+                 </tr>
+				 
+                 <tr>
+                    <td class="label"></td>
+                    <td>
+                        &nbsp; <input type="submit" name="submit" value="Save">
+                       <input type="button" name="cancel" value="Cancel" class="cancel" onClick="cancelAdd()">
+                    </td>
+                 </tr>
+                </table>
+            </form>
+            
+        </div>
+        
+<%- include layouts/footer.ejs %>
