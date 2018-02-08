@@ -114,7 +114,7 @@ Open new browser and go to :
 
 Open new browser and go to :
 
-- http://cubemulus.com:4300/students/
+- http://cubemulus.com:8181/students/
 
 
 
