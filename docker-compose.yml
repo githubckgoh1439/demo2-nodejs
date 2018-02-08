@@ -1,0 +1,22 @@
+version: '2'
+services:
+  db:
+    container_name: mysql_dockerhub02
+    image: dockerckgoh1439/nodejsmysql-demo2:1.0
+    volumes:
+       - /home/demo1/tmp/:/var/lib/mysql
+    network_mode: "gp-bridgenet-01"
+    ports:
+       - "3306:3306"   
+  web:
+    container_name: student_dockerhub02
+    build: .
+    image: dockerckgoh1439/nodejs-demo2:1.0
+    depends_on: 
+      - db
+    network_mode: "gp-bridgenet-01"
+    ports:
+      - "4300:4300"
+    links:
+      - db
+ 
